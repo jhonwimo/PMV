@@ -16,7 +16,7 @@ import com.impos.pmv.model.entity.TblUsuarios;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+
 import org.springframework.data.repository.query.Param;
 
 import org.springframework.stereotype.Repository;
@@ -33,8 +33,8 @@ public interface UsuarioServiceRepository  extends JpaRepository<TblUsuarios, Lo
     public List<TblUsuarios> finProdcutos ();
     
     
-       @Query(value = "SELECT u FROM TblUsuarios u where u.nombreUsuario= :usu and  u.clave= :pass")
-    public TblUsuarios findByNombreUsuarioAndClave (@Param("usu") String usu,@Param("pass") String clave);
+       @Query(value = "SELECT u FROM TblUsuarios u where u.nombreUsuario= :usu ")
+    public TblUsuarios findByNombreUsuario (@Param("usu") String usu);
     
     
   

@@ -47,7 +47,9 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 			} else {
 				SecurityContextHolder.clearContext();
 			}
+			if(!usuario.equals("N/A")) {
 			logger.info("Acceso Api >>>>>  "+usuario+" a url >>> "+ url);
+			}
 			chain.doFilter(request, response);
 			
 			if(HttpServletResponse.SC_FORBIDDEN==response.getStatus()) {

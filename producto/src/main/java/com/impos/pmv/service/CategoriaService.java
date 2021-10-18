@@ -3,7 +3,7 @@ package com.impos.pmv.service;
 
 
 import com.impos.pmv.model.dto.CategoriaDto;
-import com.impos.pmv.model.entity.TblCategoria;
+import com.impos.pmv.model.entity.TblCategorias;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ import java.util.List;
 public interface CategoriaService {
     
 
-    public List<TblCategoria> findAll();
+    public List<TblCategorias> findAll();
     
     public CategoriaDto save (CategoriaDto categoriaDto);
     

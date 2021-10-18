@@ -2,12 +2,14 @@ package com.impos.pmv;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.impos.pmv.security.JWTAuthorizationFilter;
@@ -29,7 +31,7 @@ public class Application {
 					.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 					.authorizeRequests().antMatchers(HttpMethod.POST, "/token").permitAll()
 
-					.antMatchers(HttpMethod.GET, "/usuario").hasRole("ADMIN")
+					
 					.antMatchers(HttpMethod.PUT, "/usuario").hasRole("ADMIN")
 					.antMatchers(HttpMethod.POST, "/usuario").hasRole("ADMIN")
 
@@ -38,6 +40,7 @@ public class Application {
 
 					.antMatchers(HttpMethod.GET, "/categoria").hasAnyRole("ADMIN", "USER")
 					.antMatchers(HttpMethod.GET, "/producto").hasAnyRole("ADMIN", "USER")
+					.antMatchers(HttpMethod.GET, "/usuario").hasRole("ADMIN")
 
 					.antMatchers(HttpMethod.PUT, "/categoria").hasAnyRole("ADMIN", "USER")
 					.antMatchers(HttpMethod.PUT, "/producto").hasAnyRole("ADMIN", "USER")
@@ -45,6 +48,11 @@ public class Application {
 					.anyRequest().authenticated();
 		}
 
+	}
+
+	@Bean
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
 	}
 
 }

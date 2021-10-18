@@ -12,18 +12,22 @@ package com.impos.pmv.model.dto;
 public class UsuarioDto {
     
     
-	private String id  ;
+	private Long id  ;
 	private String nombreCompleto ;
 	private String nombreUsuario ;
 	private String clave  ;
-	private String fechaCreacion   ;
-	private String fechaUltimoIngreso   ;
-	private String nivelAcceso  ;
-	private String idEstado ;
-	public String getId() {
+	
+	private Long nivelAcceso  ;
+	private Long idEstado ;
+
+	
+	
+	
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombreCompleto() {
@@ -44,28 +48,17 @@ public class UsuarioDto {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
-	public String getFechaCreacion() {
-		return fechaCreacion;
-	}
-	public void setFechaCreacion(String fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
-	}
-	public String getFechaUltimoIngreso() {
-		return fechaUltimoIngreso;
-	}
-	public void setFechaUltimoIngreso(String fechaUltimoIngreso) {
-		this.fechaUltimoIngreso = fechaUltimoIngreso;
-	}
-	public String getNivelAcceso() {
+	
+	public Long getNivelAcceso() {
 		return nivelAcceso;
 	}
-	public void setNivelAcceso(String nivelAcceso) {
+	public void setNivelAcceso(Long nivelAcceso) {
 		this.nivelAcceso = nivelAcceso;
 	}
-	public String getIdEstado() {
+	public Long getIdEstado() {
 		return idEstado;
 	}
-	public void setIdEstado(String idEstado) {
+	public void setIdEstado(Long idEstado) {
 		this.idEstado = idEstado;
 	}
 

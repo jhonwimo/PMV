@@ -26,7 +26,7 @@ public class CategoriaController {
 	}
 
 	@PutMapping("/categoria")
-	public ResponseEntity<?> Get(@Valid @RequestBody CategoriaDto categoriaDto) {
+	public ResponseEntity<?> Put(@Valid @RequestBody CategoriaDto categoriaDto) {
 		return ResponseEntity.ok(categoriaService.update(categoriaDto));
 	}
 }

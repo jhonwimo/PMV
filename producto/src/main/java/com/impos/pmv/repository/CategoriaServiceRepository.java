@@ -11,7 +11,7 @@ package com.impos.pmv.repository;
 
 
 
-import com.impos.pmv.model.entity.TblCategoria;
+import com.impos.pmv.model.entity.TblCategorias;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -23,11 +23,11 @@ import org.springframework.stereotype.Repository;
  * @author jwmoreno
  */
 @Repository
-public interface CategoriaServiceRepository  extends JpaRepository<TblCategoria, Long> {
+public interface CategoriaServiceRepository  extends JpaRepository<TblCategorias, Long> {
     
     
-      @Query(value = "SELECT u FROM TblCategoria u  ")
-    public List<TblCategoria> finCategoria ();
+      @Query(value = "SELECT u FROM TblCategorias u  ")
+    public List<TblCategorias> finCategoria ();
         
   
    

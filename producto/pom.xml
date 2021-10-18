@@ -20,6 +20,7 @@
 
     <dependencies>
     
+  
 
         <!-- asynchronous loggers -->
         <dependency>
@@ -88,20 +89,13 @@
 		</dependency>
         
         
-        
-        
-        
+<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+  
+</dependency>
 
-
-
-	
-
-    
-        
-       
-     
-
-      
 
             
         <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
@@ -117,11 +111,7 @@
         </dependency>
     
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+      
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

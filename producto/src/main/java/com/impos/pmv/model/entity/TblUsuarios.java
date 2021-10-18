@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.impos.pmv.model.entity;
 
 import java.io.Serializable;
@@ -10,7 +5,6 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,12 +19,14 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  *
- * @author jwmoreno
+ * @author jhonw
  */
+
+
 @Entity
 @Table(name = "TBL_USUARIOS")
 @XmlRootElement
@@ -38,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
     @NamedQuery(name = "TblUsuarios.findAll", query = "SELECT t FROM TblUsuarios t"),
     @NamedQuery(name = "TblUsuarios.findById", query = "SELECT t FROM TblUsuarios t WHERE t.id = :id"),
     @NamedQuery(name = "TblUsuarios.findByNombreCompleto", query = "SELECT t FROM TblUsuarios t WHERE t.nombreCompleto = :nombreCompleto"),
-    @NamedQuery(name = "TblUsuarios.findByNombreUsuarioAndClave", query = "SELECT t FROM TblUsuarios t WHERE t.nombreUsuario = :nombreUsuario and t.clave= :clave "),
+    @NamedQuery(name = "TblUsuarios.findByNombreUsuario", query = "SELECT t FROM TblUsuarios t WHERE t.nombreUsuario = :nombreUsuario "),
     @NamedQuery(name = "TblUsuarios.findByClave", query = "SELECT t FROM TblUsuarios t WHERE t.clave = :clave"),
     @NamedQuery(name = "TblUsuarios.findByFechaCreacion", query = "SELECT t FROM TblUsuarios t WHERE t.fechaCreacion = :fechaCreacion"),
     @NamedQuery(name = "TblUsuarios.findByFechaUltimoIngreso", query = "SELECT t FROM TblUsuarios t WHERE t.fechaUltimoIngreso = :fechaUltimoIngreso"),
@@ -46,45 +42,48 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class TblUsuarios implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @NotNull
-    @Column(name = "ID")
+    @Column(name = "id")
     private Long id;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 50)
-    @Column(name = "NOMBRE_COMPLETO")
+    @Column(name = "nombre_completo")
     private String nombreCompleto;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 50)
-    @Column(name = "NOMBRE_USUARIO")
+    @Column(name = "nombre_usuario")
     private String nombreUsuario;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 50)
-    @Column(name = "CLAVE")
+    @Size(min = 1, max = 100)
+    @Column(name = "clave")
     private String clave;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "FECHA_CREACION")
+    @Column(name = "fecha_creacion")
     @Temporal(TemporalType.DATE)
     private Date fechaCreacion;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "FECHA_ULTIMO_INGRESO")
+    @Column(name = "fecha_ultimo_ingreso")
     @Temporal(TemporalType.DATE)
     private Date fechaUltimoIngreso;
+  
+ 
+    
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 10)
-    @Column(name = "NIVEL_ACCESO")
-    private String nivelAcceso;
-    @JoinColumn(name = "ID_ESTADO", referencedColumnName = "ID_ESTADO")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-  @JsonIgnore
+    @JoinColumn(name = "nivel_acceso", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private TblRoles nivelAcceso;
+    
+    
+    
+    @JoinColumn(name = "id_estado", referencedColumnName = "id_estado")
+    @ManyToOne(optional = false)
     private TblEstados idEstado;
 
     public TblUsuarios() {
@@ -94,14 +93,14 @@ public class TblUsuarios implements Serializable {
         this.id = id;
     }
 
-    public TblUsuarios(Long id, String nombreCompleto, String nombreUsuario, String clave, Date fechaCreacion, Date fechaUltimoIngreso, String nivelAcceso) {
+    public TblUsuarios(Long id, String nombreCompleto, String nombreUsuario, String clave, Date fechaCreacion, Date fechaUltimoIngreso) {
         this.id = id;
         this.nombreCompleto = nombreCompleto;
         this.nombreUsuario = nombreUsuario;
         this.clave = clave;
         this.fechaCreacion = fechaCreacion;
         this.fechaUltimoIngreso = fechaUltimoIngreso;
-        this.nivelAcceso = nivelAcceso;
+
     }
 
     public Long getId() {
@@ -152,13 +151,7 @@ public class TblUsuarios implements Serializable {
         this.fechaUltimoIngreso = fechaUltimoIngreso;
     }
 
-    public String getNivelAcceso() {
-        return nivelAcceso;
-    }
-
-    public void setNivelAcceso(String nivelAcceso) {
-        this.nivelAcceso = nivelAcceso;
-    }
+ 
 
     public TblEstados getIdEstado() {
         return idEstado;
@@ -192,5 +185,15 @@ public class TblUsuarios implements Serializable {
     public String toString() {
         return "com.impos.pmv.model.entity.TblUsuarios[ id=" + id + " ]";
     }
+
+	public TblRoles getNivelAcceso() {
+		return nivelAcceso;
+	}
+
+	public void setNivelAcceso(TblRoles nivelAcceso) {
+		this.nivelAcceso = nivelAcceso;
+	}
+    
+    
     
 }

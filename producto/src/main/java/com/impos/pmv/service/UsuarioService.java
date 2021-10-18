@@ -30,6 +30,6 @@ public interface UsuarioService {
      
          public UsuarioDto update(UsuarioDto usuarios);
     
-     public TblUsuarios findByNombreUsuarioAndClave(String nombre,String password);
+     public TblUsuarios findByNombreUsuario(String nombre);
     
 }

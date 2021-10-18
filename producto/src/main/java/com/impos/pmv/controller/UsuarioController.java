@@ -38,7 +38,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/usuario")
-    public ResponseEntity<?> Get(@Valid @RequestBody UsuarioDto usuarioDto) {
+    public ResponseEntity<?> Put(@Valid @RequestBody UsuarioDto usuarioDto) {
         return ResponseEntity.ok(UsuarioService.update(usuarioDto));
     }
     

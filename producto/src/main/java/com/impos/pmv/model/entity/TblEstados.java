@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.impos.pmv.model.entity;
 
 import java.io.Serializable;
@@ -11,7 +6,8 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -22,52 +18,73 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 /**
  *
- * @author jwmoreno
+ * @author jhonw
  */
+
+
 @Entity
 @Table(name = "TBL_ESTADOS")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "TblEstados.findAll", query = "SELECT t FROM TblEstados t"),
     @NamedQuery(name = "TblEstados.findByIdEstado", query = "SELECT t FROM TblEstados t WHERE t.idEstado = :idEstado"),
+    @NamedQuery(name = "TblEstados.findByEstado", query = "SELECT t FROM TblEstados t WHERE t.estado = :estado"),
     @NamedQuery(name = "TblEstados.findByDescripcion", query = "SELECT t FROM TblEstados t WHERE t.descripcion = :descripcion")})
 public class TblEstados implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id_estado")
+    private Long idEstado;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 1)
-    @Column(name = "ID_ESTADO")
-    private String idEstado;
+    @Size(min = 1, max = 10)
+    @Column(name = "estado")
+    private String estado;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 50)
-    @Column(name = "DESCRIPCION")
+    @Column(name = "descripcion")
     private String descripcion;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEstado", fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEstado")
     private Collection<TblUsuarios> tblUsuariosCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEstado")
+    private Collection<TblProductos> tblProductosCollection;
 
     public TblEstados() {
     }
 
-    public TblEstados(String idEstado) {
+    public TblEstados(Long idEstado) {
         this.idEstado = idEstado;
     }
 
-    public TblEstados(String idEstado, String descripcion) {
+    public TblEstados(Long idEstado, String estado, String descripcion) {
         this.idEstado = idEstado;
+        this.estado = estado;
         this.descripcion = descripcion;
     }
 
-    public String getIdEstado() {
+    public Long getIdEstado() {
         return idEstado;
     }
 
-    public void setIdEstado(String idEstado) {
+    public void setIdEstado(Long idEstado) {
         this.idEstado = idEstado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getDescripcion() {
@@ -79,12 +96,23 @@ public class TblEstados implements Serializable {
     }
 
     @XmlTransient
+    @JsonIgnore 
     public Collection<TblUsuarios> getTblUsuariosCollection() {
         return tblUsuariosCollection;
     }
 
     public void setTblUsuariosCollection(Collection<TblUsuarios> tblUsuariosCollection) {
         this.tblUsuariosCollection = tblUsuariosCollection;
+    }
+
+    @XmlTransient
+    @JsonIgnore 
+    public Collection<TblProductos> getTblProductosCollection() {
+        return tblProductosCollection;
+    }
+
+    public void setTblProductosCollection(Collection<TblProductos> tblProductosCollection) {
+        this.tblProductosCollection = tblProductosCollection;
     }
 
     @Override

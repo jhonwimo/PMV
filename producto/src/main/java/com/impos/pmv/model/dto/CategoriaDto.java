@@ -5,7 +5,7 @@
  */
 package com.impos.pmv.model.dto;
 
-import java.util.Date;
+
 
 /**
  *
@@ -17,11 +17,9 @@ public class CategoriaDto {
    
     private String nombre;
    
-    private String estado;
+    private Long IdEstado;
    
-    private Date fechaCreacion;
-  
-    private Date fechaActualizacion;
+
 
     public Long getIdCategoria() {
         return idCategoria;
@@ -39,29 +37,16 @@ public class CategoriaDto {
         this.nombre = nombre;
     }
 
-    public String getEstado() {
-        return estado;
-    }
+	public Long getIdEstado() {
+		return IdEstado;
+	}
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
+	public void setIdEstado(Long idEstado) {
+		IdEstado = idEstado;
+	}
 
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
+    
 
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    public Date getFechaActualizacion() {
-        return fechaActualizacion;
-    }
-
-    public void setFechaActualizacion(Date fechaActualizacion) {
-        this.fechaActualizacion = fechaActualizacion;
-    }
 
     
 

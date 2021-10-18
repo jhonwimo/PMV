@@ -10,19 +10,21 @@ public class ProductosDto {
 	 
 	    private String nombre;
 	   
-	    private String idCategoria;
+	    private Long idCategoria;
 	    
-	    private String costo;
+	    private Long costo;
 	   
-	    private String precio;
+	    private Long precio;
 	   
-	    private String listatag;
+	    private String tag;
 	    
-	    private Date fechaCreacion;
 	    
-	    private Date fechaActualizacion;
 	   
-	    private Character idEstado;
+	    private Long idEstado;
+
+	
+
+	
 
 	
 
@@ -42,59 +44,49 @@ public class ProductosDto {
 			this.nombre = nombre;
 		}
 
-		public String getIdCategoria() {
+		public Long getIdCategoria() {
 			return idCategoria;
 		}
 
-		public void setIdCategoria(String idCategoria) {
+		public void setIdCategoria(Long idCategoria) {
 			this.idCategoria = idCategoria;
 		}
 
-		public String getCosto() {
+		public Long getCosto() {
 			return costo;
 		}
 
-		public void setCosto(String costo) {
+		public void setCosto(Long costo) {
 			this.costo = costo;
 		}
 
-		public String getPrecio() {
+		public Long getPrecio() {
 			return precio;
 		}
 
-		public void setPrecio(String precio) {
+		public void setPrecio(Long precio) {
 			this.precio = precio;
 		}
 
-		public String getListatag() {
-			return listatag;
+		
+
+	
+
+		public String getTag() {
+			return tag;
 		}
 
-		public void setListatag(String listatag) {
-			this.listatag = listatag;
+		public void setTag(String tag) {
+			this.tag = tag;
 		}
 
-		public Date getFechaCreacion() {
-			return fechaCreacion;
-		}
+		
 
-		public void setFechaCreacion(Date fechaCreacion) {
-			this.fechaCreacion = fechaCreacion;
-		}
-
-		public Date getFechaActualizacion() {
-			return fechaActualizacion;
-		}
-
-		public void setFechaActualizacion(Date fechaActualizacion) {
-			this.fechaActualizacion = fechaActualizacion;
-		}
-
-		public Character getIdEstado() {
+		public Long getIdEstado() {
 			return idEstado;
 		}
 
-		public void setIdEstado(Character idEstado) {
+		public void setIdEstado(Long idEstado) {
 			this.idEstado = idEstado;
 		}
 
