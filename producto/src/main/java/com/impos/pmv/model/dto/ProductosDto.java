@@ -1,95 +1,81 @@
 package com.impos.pmv.model.dto;
 
-import java.util.Date;
 
 
+import javax.validation.constraints.NotNull;
 
 public class ProductosDto {
-	
-	 private Long id;
-	 
-	    private String nombre;
-	   
-	    private Long idCategoria;
-	    
-	    private Long costo;
-	   
-	    private Long precio;
-	   
-	    private String tag;
-	    
-	    
-	   
-	    private Long idEstado;
 
-	
+	private Long id;
 
-	
+	@NotNull(message = "El campo debe ser enviado")
+	private String nombre;
+	@NotNull(message = "El campo debe ser enviado")
+	private Long idCategoria;
+	@NotNull(message = "El campo debe ser enviado")
+	private Long costo;
+	@NotNull(message = "El campo debe ser enviado")
+	private Long precio;
+	@NotNull(message = "El campo debe ser enviado")
+	private String tag;
 
-	
+	@NotNull(message = "El campo debe ser enviado")
+	private Long idEstado;
 
-		public Long getId() {
-			return id;
-		}
+	public Long getId() {
+		return id;
+	}
 
-		public void setId(Long id) {
-			this.id = id;
-		}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-		public String getNombre() {
-			return nombre;
-		}
+	public String getNombre() {
+		return nombre;
+	}
 
-		public void setNombre(String nombre) {
-			this.nombre = nombre;
-		}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-		public Long getIdCategoria() {
-			return idCategoria;
-		}
+	public Long getIdCategoria() {
+		return idCategoria;
+	}
 
-		public void setIdCategoria(Long idCategoria) {
-			this.idCategoria = idCategoria;
-		}
+	public void setIdCategoria(Long idCategoria) {
+		this.idCategoria = idCategoria;
+	}
 
-		public Long getCosto() {
-			return costo;
-		}
+	public Long getCosto() {
+		return costo;
+	}
 
-		public void setCosto(Long costo) {
-			this.costo = costo;
-		}
+	public void setCosto(Long costo) {
+		this.costo = costo;
+	}
 
-		public Long getPrecio() {
-			return precio;
-		}
+	public Long getPrecio() {
+		return precio;
+	}
 
-		public void setPrecio(Long precio) {
-			this.precio = precio;
-		}
+	public void setPrecio(Long precio) {
+		this.precio = precio;
+	}
 
-		
+	public String getTag() {
+		return tag;
+	}
 
-	
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
 
-		public String getTag() {
-			return tag;
-		}
+	public Long getIdEstado() {
+		return idEstado;
+	}
 
-		public void setTag(String tag) {
-			this.tag = tag;
-		}
+	public void setIdEstado(Long idEstado) {
+		this.idEstado = idEstado;
+	}
 
-		
-
-		public Long getIdEstado() {
-			return idEstado;
-		}
-
-		public void setIdEstado(Long idEstado) {
-			this.idEstado = idEstado;
-		}
-
-		
-	    
 }

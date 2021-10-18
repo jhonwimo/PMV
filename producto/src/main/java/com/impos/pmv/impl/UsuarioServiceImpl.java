@@ -15,7 +15,7 @@ import com.impos.pmv.util.Msm;
 
 import java.util.Date;
 import java.util.List;
-import org.modelmapper.ModelMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -35,7 +35,6 @@ import org.springframework.stereotype.Service;
 public class UsuarioServiceImpl implements UsuarioService {
 
 
-	private final ModelMapper modelMapper = new ModelMapper();
 	
 	Msm msm=new Msm();
 
@@ -59,7 +58,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public UsuarioDto update(UsuarioDto usuarios) {
-		usuarioServiceRepository.findById(usuarios.getId())
+		TblUsuarios usuario = usuarioServiceRepository.findById(usuarios.getId())
 				.orElseThrow(() -> new UsuarioNoEncontradaException(msm.USUARIO));
 
 		rolServiceRepository.findById(usuarios.getNivelAcceso()).orElseThrow(
@@ -68,9 +67,20 @@ public class UsuarioServiceImpl implements UsuarioService {
 	    estadoServiceRepository.findById(usuarios.getIdEstado())
 				.orElseThrow(() -> new CategoriaNoEncontradaException(msm.ESTADO));
 
-		TblUsuarios usuario = modelMapper.map(usuarios, TblUsuarios.class);
-		TblEstados estado = new TblEstados();
-		estado.setIdEstado(usuarios.getIdEstado());
+	
+	    
+	    TblEstados estado = new TblEstados();
+		TblRoles rol = new TblRoles();
+		rol.setId(usuarios.getNivelAcceso() == null ? usuarios.getNivelAcceso() : usuarios.getNivelAcceso());
+		estado.setIdEstado(usuarios.getIdEstado() == null ? usuarios.getIdEstado() : usuarios.getIdEstado());
+		usuario.setClave(bCryptPasswordEncoder.encode(usuarios.getClave()));
+		usuario.setNombreCompleto(usuarios.getNombreCompleto() == null ? usuarios.getNombreCompleto() : usuarios.getNombreCompleto());
+		usuario.setNombreUsuario(usuarios.getNombreUsuario() == null ? usuarios.getNombreUsuario() : usuarios.getNombreUsuario());
+		usuario.setNivelAcceso(rol);
+		usuario.setIdEstado(estado);
+		usuario.setFechaCreacion(new Date());
+		usuario.setFechaUltimoIngreso(new Date());
+	   
 		usuario.setIdEstado(estado);
 		usuarioServiceRepository.save(usuario);
 		return usuarios;

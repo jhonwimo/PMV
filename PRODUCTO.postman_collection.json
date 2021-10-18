@@ -1,0 +1,415 @@
+{
+	"id": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+	"name": "PRODUCTO",
+	"description": "",
+	"order": [
+		"ce6cbb96-6603-1a50-d079-314b1844e2e5",
+		"52e783ce-1541-6b49-7f79-22d2c78aa587",
+		"bf4ff018-4c19-c3b0-ea51-edd6f1cf3e07",
+		"929ba6ae-be87-23d0-6e94-194ae53e57f4",
+		"cd260a35-e8f5-e8dd-8e1f-f88e83ca17bc",
+		"bc7eb564-10c0-1706-866e-4a206909bf3a",
+		"c45c0b39-3488-b594-1833-0161f797218a",
+		"e38f47e9-e24f-3b72-f18e-796083173f9a",
+		"403dbdf7-bb9b-864b-3236-a3671e45dc38",
+		"9fcdc001-76e7-a76d-ef28-e6a288a9c4b2",
+		"75b819ab-d1d9-f119-5362-0be48ad8c47d"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1635396976549,
+	"owner": "3295287",
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "403dbdf7-bb9b-864b-3236-a3671e45dc38",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM1NDU5NzE2LCJleHAiOjE2MzU0NjAzMTZ9.wuWPGUW6MZ92wfLE468rW2u8MDQqUMv8UUDXWPBcVHxedD4d1KGMQcllwQLiYZC3aS7z609Hxyy7_EXGomzhVg\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM1NDU5NzE2LCJleHAiOjE2MzU0NjAzMTZ9.wuWPGUW6MZ92wfLE468rW2u8MDQqUMv8UUDXWPBcVHxedD4d1KGMQcllwQLiYZC3aS7z609Hxyy7_EXGomzhVg",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/usuario",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634587788263,
+			"name": "update usuario",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": " {\"id\": 2,\n        \"nombreCompleto\": \"jhon 4443.0\",\n        \"nombreUsuario\": \"jhonS\",\n        \"clave\": \"1234\",\n    \n        \"nivelAcceso\": 1,\n        \"idEstado\":1\n }"
+		},
+		{
+			"id": "52e783ce-1541-6b49-7f79-22d2c78aa587",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg3ODAyLCJleHAiOjE2MzQ1ODg0MDJ9.rrDsrsUBBU9Zdo6Iy-8tPMftBYeIVibn-8dnnF1mu5ymQcFq8C0i9fH_XBYIX4HSeq4tDmZBkKX90k-53a2DjA\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg3ODAyLCJleHAiOjE2MzQ1ODg0MDJ9.rrDsrsUBBU9Zdo6Iy-8tPMftBYeIVibn-8dnnF1mu5ymQcFq8C0i9fH_XBYIX4HSeq4tDmZBkKX90k-53a2DjA",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/categoria",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634587819693,
+			"name": "Consulta categoria",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": []
+		},
+		{
+			"id": "75b819ab-d1d9-f119-5362-0be48ad8c47d",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/token",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "user",
+					"value": "jhon",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "jhon3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634570606006,
+			"name": "TOKEN ADMIN",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": []
+		},
+		{
+			"id": "929ba6ae-be87-23d0-6e94-194ae53e57f4",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg2NjM3LCJleHAiOjE2MzQ1ODcyMzd9.7mOXatN8Is7opDPNEgESf4xy-Fw5NnpLJeH-TNIQQIGSBVLysmk5Xm1ZyOygbTVVyXhaL408lBAGcDOIe6u9OQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg2NjM3LCJleHAiOjE2MzQ1ODcyMzd9.7mOXatN8Is7opDPNEgESf4xy-Fw5NnpLJeH-TNIQQIGSBVLysmk5Xm1ZyOygbTVVyXhaL408lBAGcDOIe6u9OQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/usuario",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634587130565,
+			"name": "insertarUsuario",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": "{\n\"nombreCompleto\":\"edinson\",\n\"nombreUsuario\":\"eduardo\",\n\"clave\":\"edinson3\",\n\"nivelAcceso\":1,\n\"idEstado\":1\n}"
+		},
+		{
+			"id": "9fcdc001-76e7-a76d-ef28-e6a288a9c4b2",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/token",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "user",
+					"value": "eduardo",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "edinson3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634572688632,
+			"name": "TOKEN USUARIO",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": []
+		},
+		{
+			"id": "bc7eb564-10c0-1706-866e-4a206909bf3a",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg2NjM3LCJleHAiOjE2MzQ1ODcyMzd9.7mOXatN8Is7opDPNEgESf4xy-Fw5NnpLJeH-TNIQQIGSBVLysmk5Xm1ZyOygbTVVyXhaL408lBAGcDOIe6u9OQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg2NjM3LCJleHAiOjE2MzQ1ODcyMzd9.7mOXatN8Is7opDPNEgESf4xy-Fw5NnpLJeH-TNIQQIGSBVLysmk5Xm1ZyOygbTVVyXhaL408lBAGcDOIe6u9OQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/categoria",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634587053877,
+			"name": "insertar categoria",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": "{\n      \n        \"nombre\": \"MECANICOa\",\n        \"idEstado\":1\n    }"
+		},
+		{
+			"id": "bf4ff018-4c19-c3b0-ea51-edd6f1cf3e07",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg2NjM3LCJleHAiOjE2MzQ1ODcyMzd9.7mOXatN8Is7opDPNEgESf4xy-Fw5NnpLJeH-TNIQQIGSBVLysmk5Xm1ZyOygbTVVyXhaL408lBAGcDOIe6u9OQ\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTg2NjM3LCJleHAiOjE2MzQ1ODcyMzd9.7mOXatN8Is7opDPNEgESf4xy-Fw5NnpLJeH-TNIQQIGSBVLysmk5Xm1ZyOygbTVVyXhaL408lBAGcDOIe6u9OQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/producto",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634587097006,
+			"name": "Consulta producto",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": []
+		},
+		{
+			"id": "c45c0b39-3488-b594-1833-0161f797218a",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiZWRpbnNvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2MzU0NTkyMzksImV4cCI6MTYzNTQ1OTgzOX0.ZrX5cNZN1Nd5i0LMqnL6sEvKsSeQTJDtMp2EFtUyqIhhJV4Wc9dPbni2N-xkOuqxgw6-0enHFdotfaSEOddjrQ\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiZWRpbnNvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2MzU0NTkyMzksImV4cCI6MTYzNTQ1OTgzOX0.ZrX5cNZN1Nd5i0LMqnL6sEvKsSeQTJDtMp2EFtUyqIhhJV4Wc9dPbni2N-xkOuqxgw6-0enHFdotfaSEOddjrQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/categoria",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634586928944,
+			"name": "actualizar categoria",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": " {\n  \"idCategoria\": 1,\n        \"nombre\": \"ELECTRONICO\",\n        \"idEstado\": 1,\n        \"fechaCreacion\": \"2021-10-27\",\n        \"fechaActualizacion\": \"2021-10-27\"\n }"
+		},
+		{
+			"id": "cd260a35-e8f5-e8dd-8e1f-f88e83ca17bc",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM1NDU4NTg1LCJleHAiOjE2MzU0NTkxODV9.8BQJhz7xnEK-6_9hVTpYi1UtqOWzvRlwa398-5uIXz6af5LI5a5e83QNccD4X2rZHxdnQfMceZuni5PIqIzVTw\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM1NDU4NTg1LCJleHAiOjE2MzU0NTkxODV9.8BQJhz7xnEK-6_9hVTpYi1UtqOWzvRlwa398-5uIXz6af5LI5a5e83QNccD4X2rZHxdnQfMceZuni5PIqIzVTw",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/producto",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634586610798,
+			"name": "insertar Producto",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": "{\n       \n        \"nombre\": \"nevera3\",\n        \"idCategoria\": 1,\n        \"costo\": 33,\n        \"precio\": 33,\n        \"listatag\": \"DDD\",\n        \"idEstado\": 1,\n        \"tag\":\"marca\"\n    }"
+		},
+		{
+			"id": "ce6cbb96-6603-1a50-d079-314b1844e2e5",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM1NDU4OTgxLCJleHAiOjE2MzU0NTk1ODF9.5PMOr90HQR5hnwlz8IviWpqZhgPAtT96bJKGjea7ivdQO0H4Wf8mjqhPHT21d05etZ8qlLbcIv3tsYC0Z7fryg\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM1NDU4OTgxLCJleHAiOjE2MzU0NTk1ODF9.5PMOr90HQR5hnwlz8IviWpqZhgPAtT96bJKGjea7ivdQO0H4Wf8mjqhPHT21d05etZ8qlLbcIv3tsYC0Z7fryg",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/usuario",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634572971632,
+			"name": "Consulta usuario",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": "{\n\"nombre\":\"dd\",\n\"estado\":\"A\",\n\"fechaCreacion\":\"2021-10-27\",\n\"fechaActualizacion\":\"2021-10-27\"\n}"
+		},
+		{
+			"id": "e38f47e9-e24f-3b72-f18e-796083173f9a",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTgzMTM0LCJleHAiOjE2MzQ1ODM3MzR9.IOhYYmksFDVsJA_sL4AL-f9xXJ4fyx4oaM8IlkjxRQ2uLPFCOxzqu_893vc3J09by0tx2o6EbZEjKnylEYoj6w\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiamhvbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjM0NTgzMTM0LCJleHAiOjE2MzQ1ODM3MzR9.IOhYYmksFDVsJA_sL4AL-f9xXJ4fyx4oaM8IlkjxRQ2uLPFCOxzqu_893vc3J09by0tx2o6EbZEjKnylEYoj6w",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8002/api/producto",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634585565329,
+			"name": "actualizar producto",
+			"description": "",
+			"collectionId": "f642dbee-4f32-036f-bd8f-8b12290d58d1",
+			"responses": [],
+			"rawModeData": "{\"id\": 44,\n        \"nombre\": \"TELEVISOR 2.0\",\n        \"idCategoria\": 1,\n        \"costo\": 33,\n        \"precio\": 33,\n        \"tag\": \"DDD\",\n        \"fechaCreacion\": \"2021-10-27\",\n        \"fechaActualizacion\": \"2021-10-27\",\n        \"idEstado\": 1\n        }"
+		}
+	]
+}

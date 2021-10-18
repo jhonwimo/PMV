@@ -12,10 +12,12 @@ package com.impos.pmv.repository;
 
 
 import com.impos.pmv.model.entity.TblCategorias;
+
+
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -29,6 +31,7 @@ public interface CategoriaServiceRepository  extends JpaRepository<TblCategorias
       @Query(value = "SELECT u FROM TblCategorias u  ")
     public List<TblCategorias> finCategoria ();
         
-  
+      @Query(value = "SELECT u FROM TblCategorias u  where u.nombre= :usu ")
+   public List<TblCategorias> findByNombre (@Param("usu") String nombre);
    
 }

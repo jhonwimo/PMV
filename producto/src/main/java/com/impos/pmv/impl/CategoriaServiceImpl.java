@@ -21,9 +21,9 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Value;
+
 
 /**
  *
@@ -52,7 +52,14 @@ public class CategoriaServiceImpl implements CategoriaService {
 	public CategoriaDto save(CategoriaDto categoriaDto) {
 		estadoServiceRepository.findById(categoriaDto.getIdEstado())
 				.orElseThrow(() -> new CategoriaNoEncontradaException(msm.ESTADO));
-		TblCategorias categoria = new TblCategorias();
+		
+		List<TblCategorias> cate=categoriaServiceRepository.findByNombre(categoriaDto.getNombre());
+		if(!cate.isEmpty()) {
+			throw new CategoriaNoEncontradaException(msm.CATEGORIA_EXISTE); 
+		}
+			
+		
+		TblCategorias  categoria = new TblCategorias();
 		TblEstados estado = new TblEstados();
 		estado.setIdEstado(categoriaDto.getIdEstado());
 		categoria.setFechaCreacion(new Date());
@@ -65,17 +72,18 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	public CategoriaDto update(CategoriaDto categoriaDto) {
-		categoriaServiceRepository.findById(categoriaDto.getIdCategoria())
+		TblCategorias categoria =categoriaServiceRepository.findById(categoriaDto.getIdCategoria())
 				.orElseThrow(() -> new CategoriaNoEncontradaException(msm.CATEGORIA));
 
 		estadoServiceRepository.findById(categoriaDto.getIdEstado())
 				.orElseThrow(() -> new CategoriaNoEncontradaException(msm.ESTADO));
 
-		TblCategorias categoria = new TblCategorias();
+	
 		TblEstados estado = new TblEstados();
 		estado.setIdEstado(categoriaDto.getIdEstado());
+		estado.setIdEstado(categoriaDto.getIdEstado() == null ? categoriaDto.getIdEstado() : categoriaDto.getIdEstado() );
 		categoria.setFechaActualizacion(new Date());
-		categoria.setNombre(categoriaDto.getNombre());
+		categoria.setNombre(categoriaDto.getNombre() == null ? categoriaDto.getNombre() : categoriaDto.getNombre());
 		categoria.setIdEstado(estado);
 		categoriaServiceRepository.save(categoria);
 

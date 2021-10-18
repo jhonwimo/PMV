@@ -73,6 +73,7 @@ public class ProductoServiceImpl implements ProductoService {
 		producto.setFechaCreacion(new Date());
 		producto.setFechaActualizacion(new Date());
 		producto.setIdEstado(estado);
+		producto.setIdCategoria(categoria);
 		productoServiceRepository.save(producto);
 		return productosDto;
 	}
@@ -94,7 +95,7 @@ public class ProductoServiceImpl implements ProductoService {
 		categoria.setIdCategoria(productosDto.getIdCategoria());
 		product.setIdEstado(estado);
 		product.setFechaActualizacion(new Date());
-
+		product.setIdCategoria(categoria);
 		product.setTag(productosDto.getTag() == null ? productosDto.getTag() : product.getTag());
 		product.setNombre(productosDto.getNombre() == null ? productosDto.getNombre() : product.getNombre());
 		product.setPrecio(productosDto.getPrecio() == null ? productosDto.getPrecio() : product.getPrecio());

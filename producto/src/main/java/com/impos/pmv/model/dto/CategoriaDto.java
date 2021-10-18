@@ -5,7 +5,7 @@
  */
 package com.impos.pmv.model.dto;
 
-
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -14,9 +14,9 @@ package com.impos.pmv.model.dto;
 public class CategoriaDto {
 
     private Long idCategoria;
-   
+    @NotNull(message="El campo debe ser enviado")
     private String nombre;
-   
+    @NotNull(message="El campo debe ser enviado")
     private Long IdEstado;
    
 
