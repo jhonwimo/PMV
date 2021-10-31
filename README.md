@@ -39,5 +39,13 @@ se creo solo un usuario llamado jhon este tiene el rol ADMIN en el postman este 
 Tecnologías java,maven,Spring Boot,jpa,docker
 
 
+Nota: para conectarse al BD, esto si se creó con docker 
+Usuario:         sa
+Contraseña : Jour!Passw0rd
+Puerto : 1470
+Base datos:  PRUEBA
+
+
+
 
 
