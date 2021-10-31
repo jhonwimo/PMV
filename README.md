@@ -1,7 +1,7 @@
 # PMV
 
 
-proyecto codificado sobre java 1.8
+proyecto codificado sobre java 1.8  ,el codigo fuente esta en la carpeta <proyecto> ,Script bd esta en la carpeta <sql>
 
 Tecnologías java,maven,Spring Boot,jpa
 En la carpeta sql dejo el script para correr en la bd de sql server (crear una Base de datos llamada prueba sobre esa se ejecuta el script)
