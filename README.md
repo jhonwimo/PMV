@@ -43,7 +43,7 @@ Nota: para conectarse al BD, esto si se creó con docker
 Usuario:         sa
 Contraseña : Jour!Passw0rd
 Puerto : 1470
-Base datos:  PRUEBA
+Base datos:  PRUEBAS
 
 
 
